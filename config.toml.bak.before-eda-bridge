@@ -1,0 +1,81 @@
+model = "gpt-5.5"
+model_provider = "deeprouter"
+model_reasoning_effort = "xhigh"
+
+notify = ["/Users/xylei/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
+[model_providers.deeprouter]
+name = "deeprouter"
+wire_api = "responses"
+requires_openai_auth = true
+base_url = "https://deeprouter.top/v1"
+api_key_env = "OPENAI_API_KEY"
+
+[features]
+hooks = true
+goals = true
+js_repl = false
+
+[projects."/Users/xylei"]
+trust_level = "trusted"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-06-16T03:36:30Z"
+source_type = "local"
+source = "/Users/xylei/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.claude-mem-local]
+last_updated = "2026-06-12T07:55:27Z"
+source_type = "local"
+source = "/Users/xylei/.claude/plugins/marketplaces/thedotmack"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-06-15T06:38:31Z"
+source_type = "local"
+source = "/Users/xylei/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[desktop.open-in-target-preferences]
+global = "vscode"
+
+[desktop.open-in-target-preferences.perPath]
+"/Users/xylei" = "vscode"
+
+[plugins."claude-mem@thedotmack"]
+enabled = false
+
+[plugins."claude-mem@claude-mem-local"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/xylei/.codex"
+CODEX_HOME = "/Users/xylei/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "89809670b247cbaffbc4f87d9fa9742a9038c0f4a06fb822d7f85ff19bf24215"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.609.71450"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"

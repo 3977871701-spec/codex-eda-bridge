@@ -1,0 +1,16 @@
+{
+  "name": "codex-eda-bridge",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "codex-eda-bridge": "./bin/codex-eda-bridge.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/codex-eda-bridge.mjs",
+    "smoke": "node ./bin/codex-eda-bridge.mjs --smoke"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

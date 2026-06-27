@@ -1,0 +1,9 @@
+[mcp_servers.eda_bridge]
+command = "/Users/xylei/.local/bin/node"
+args = ["/Users/xylei/codex-eda-bridge/bin/codex-eda-bridge.mjs"]
+startup_timeout_sec = 30
+
+[mcp_servers.eda_bridge.env]
+EDA_BRIDGE_HOST = "127.0.0.1"
+EDA_BRIDGE_PORT_START = "49620"
+EDA_BRIDGE_PORT_END = "49629"
